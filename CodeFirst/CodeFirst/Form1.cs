@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -41,6 +42,12 @@ namespace CodeFirst
             Beginner=1,
             Intermediate=2,
             Advanced=3
+        }
+        public class PllutoContext:DbContext
+        {
+            public DbSet<Course> Courses { get; set; }
+            public DbSet<Author> Authors { get; set; }
+            public DbSet<Tagg> Taggs { get; set; }
         }
         public Form1()
         {

@@ -48,6 +48,11 @@ namespace CodeFirst
             public DbSet<Course> Courses { get; set; }
             public DbSet<Author> Authors { get; set; }
             public DbSet<Tagg> Taggs { get; set; }
+
+            public PllutoContext():base("name=Defualtconnection")
+            {
+                
+            }
         }
         public Form1()
         {
